@@ -101,7 +101,7 @@ contract Controls {
     /// @dev Checks if the taker holds any amount of the specified token (NFTs are natively supported)
     /// @param args.token | 20 bytes
     function _onlyTakerTokenBalanceNonZero(Context memory ctx, bytes calldata args) internal view {
-        address token = address(uint160(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector))));
+        address token = address(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector)));
         uint256 balance = IERC20(token).balanceOf(ctx.query.taker);
         require(balance > 0, TakerTokenBalanceIsZero(ctx.query.taker, token));
     }
@@ -110,7 +110,7 @@ contract Controls {
     /// @param args.token     | 20 bytes
     /// @param args.minAmount | 32 bytes
     function _onlyTakerTokenBalanceGte(Context memory ctx, bytes calldata args) internal view {
-        address token = address(uint160(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector))));
+        address token = address(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector)));
         uint256 minAmount = uint256(bytes32(args.slice(20, 52, ControlsMissingMinAmountArg.selector)));
         uint256 balance = IERC20(token).balanceOf(ctx.query.taker);
         require(balance >= minAmount, TakerTokenBalanceIsLessThatRequired(ctx.query.taker, token, balance, minAmount));
@@ -120,7 +120,7 @@ contract Controls {
     /// @param args.token       | 20 bytes
     /// @param args.minShareE18 | 8 bytes
     function _onlyTakerTokenSupplyShareGte(Context memory ctx, bytes calldata args) internal view {
-        address token = address(uint160(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector))));
+        address token = address(bytes20(args.slice(0, 20, ControlsMissingTokenArg.selector)));
         uint256 minShareE18 = uint64(bytes8(args.slice(20, 28, ControlsMissingMinShareArg.selector)));
         uint256 balance = IERC20(token).balanceOf(ctx.query.taker);
         uint256 totalSupply = IERC20(token).totalSupply();
