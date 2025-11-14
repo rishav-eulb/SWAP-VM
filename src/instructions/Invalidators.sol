@@ -12,7 +12,6 @@ library InvalidatorsArgsBuilder {
     using Calldata for bytes;
 
     error InvalidatorsMissingBitIndexArg();
-    error InvalidatorsMissingTokenTailArg();
 
     function buildInvalidateBit(uint32 bitIndex) internal pure returns (bytes memory) {
         return abi.encodePacked(bitIndex);
