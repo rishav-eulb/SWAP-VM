@@ -62,8 +62,14 @@ verify-swap-vm-router-impl:
 	    fi; \
 	    CONTRACT_ADDRESS=$$($(MAKE) contract-address DEPLOYMENT_FILE=$$DEPLOYMENT_FILE); \
 	    echo "Verifying $${FILE_DEPLOY_NAME} at $$CONTRACT_ADDRESS on $(OPS_NETWORK)..."; \
+	    echo "Constructor args: aqua=$(OPS_AQUA_ADDRESS), name=$(OPS_SWAP_VM_ROUTER_NAME), version=$(OPS_SWAP_VM_ROUTER_VERSION)"; \
+	    CONSTRUCTOR_ARGS=$$(cast abi-encode "constructor(address,string,string)" \
+	        $(OPS_AQUA_ADDRESS) \
+	        $(OPS_SWAP_VM_ROUTER_NAME) \
+	        $(OPS_SWAP_VM_ROUTER_VERSION)); \
 	    forge verify-contract $$CONTRACT_ADDRESS \
 	        src/routers/$${FILE_DEPLOY_NAME}.sol:$${FILE_DEPLOY_NAME} \
+	        --constructor-args $$CONSTRUCTOR_ARGS \
             --skip-is-verified-check \
             --rpc-url $(RPC_URL) \
 	        --chain-id $(OPS_CHAIN_ID) \
@@ -107,6 +113,9 @@ validate-verify:
 	@{ \
 	$(MAKE) ID=OPS_NETWORK validate || exit 1; \
 	$(MAKE) ID=OPS_CHAIN_ID validate || exit 1; \
+	$(MAKE) ID=OPS_AQUA_ADDRESS validate || exit 1; \
+	$(MAKE) ID=OPS_SWAP_VM_ROUTER_NAME validate || exit 1; \
+	$(MAKE) ID=OPS_SWAP_VM_ROUTER_VERSION validate || exit 1; \
 	}
 
 validate:
