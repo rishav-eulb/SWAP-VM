@@ -1,6 +1,6 @@
 # SwapVM
 
-[![Github Release](https://img.shields.io/github/v/tag/1inch/swap-vm.svg?filter=v*&sort=semver&label=github)](https://github.com/1inch/swap-vm/releases/latest)
+[![Github Release](https://img.shields.io/github/v/tag/1inch/swap-vm?sort=semver&label=github)](https://github.com/1inch/swap-vm/releases/latest)
 [![CI](https://github.com/1inch/swap-vm/actions/workflows/ci.yml/badge.svg)](https://github.com/1inch/swap-vm/actions/workflows/ci.yml)
 [![Coverage](https://img.shields.io/badge/Coverage-50.46%25-yellow)](https://github.com/1inch/swap-vm)
 [![Tests](https://img.shields.io/github/actions/workflow/status/1inch/swap-vm/ci.yml?branch=main&label=tests)](https://github.com/1inch/swap-vm/actions)
