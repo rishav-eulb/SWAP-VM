@@ -234,7 +234,7 @@ library TakerTraitsLib {
     function _getDataSlice(TakerTraits traits, bytes calldata data, TakerDataSlices slice) private pure returns (bytes calldata) {
         return data.slice(
             _getStartOffset(traits, slice),
-            _getStopOffset(traits, slice, data),
+            _getStopOffset(traits, slice, data.length),
             TakerTraitsMissingHookData.selector
         );
     }
@@ -245,8 +245,8 @@ library TakerTraitsLib {
         }
     }
 
-    function _getStopOffset(TakerTraits traits, TakerDataSlices slice, bytes calldata data) private pure returns (uint256) {
-        return (slice == TakerDataSlices.Signature) ? data.length : _getOffset(traits, uint256(slice));
+    function _getStopOffset(TakerTraits traits, TakerDataSlices slice, uint256 dataLength) private pure returns (uint256) {
+        return (slice == TakerDataSlices.Signature) ? dataLength : _getOffset(traits, uint256(slice));
     }
 
     function _getOffset(TakerTraits traits, uint256 sliceNumber) private pure returns (uint256) {
