@@ -16,6 +16,7 @@
 ## 📚 Table of Contents
 
 - [Overview](#overview)
+- [Deployment](#-deployment)
 - [How It Works](#how-it-works)
 - [For Makers (Liquidity Providers)](#-for-makers-liquidity-providers)
 - [For Takers (Swap Executors)](#-for-takers-swap-executors)
@@ -41,6 +42,28 @@ SwapVM is a **computation engine** that executes token swap strategies from byte
 - **🌾 Makers** - Provide liquidity through limit orders, AMM-style orders, or complex strategies
 - **🏃 Takers** - Execute swaps to arbitrage or fulfill trades
 - **🛠 Developers** - Build custom instructions and integrate SwapVM
+
+---
+
+## 🌐 Deployment
+
+SwapVM is deployed across multiple chains with a unified address for seamless cross-chain integration.
+
+**Contract Address:** `0x8fdd04dbf6111437b44bbca99c28882434e0958f`
+
+**Supported Networks:**
+- Ethereum Mainnet
+- Base
+- Optimism
+- Polygon
+- Arbitrum
+- Avalanche
+- Binance Smart Chain
+- Linea
+- Sonic
+- Unichain
+- Gnosis
+- zkSync
 
 ---
 
