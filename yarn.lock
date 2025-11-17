@@ -5,14 +5,14 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@1inch/aqua@github:1inch/aqua#0.0.6":
+"@1inch/aqua@github:1inch/aqua#0.0.7":
   version: 0.0.6
-  resolution: "@1inch/aqua@https://github.com/1inch/aqua.git#commit=bc9f7345f9386aa983cb19689651ede21b20eef8"
+  resolution: "@1inch/aqua@https://github.com/1inch/aqua.git#commit=ec7e8cf8cb2ba1131b670848d4757cd528014e80"
   dependencies:
     "@1inch/solidity-utils": "npm:6.8.0"
     "@openzeppelin/contracts": "npm:5.4.0"
     forge-std: "github:foundry-rs/forge-std#v1.11.0"
-  checksum: 10c0/57ced616288e9c50c5110381def0c275441eb4c1c3999f77811a29cb536a2b27b5c851431c7fade5b7cee35e140a7d6e1e9b965fb587dddc718614587019d863
+  checksum: 10c0/78862edce5b4fcafeed934444e162ee1d343884de7c388e7ee7756050207c13ad143078738cbe0d58b64dd18f2002eab7b119e019d34d7eae49a8647c40c54c6
   languageName: node
   linkType: hard
 
@@ -42,7 +42,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@1inch/swap-vm@workspace:."
   dependencies:
-    "@1inch/aqua": "github:1inch/aqua#0.0.6"
+    "@1inch/aqua": "github:1inch/aqua#0.0.7"
     "@1inch/solidity-utils": "npm:6.8.0"
     "@openzeppelin/contracts": "npm:5.4.0"
     forge-std: "github:foundry-rs/forge-std#v1.11.0"
@@ -2376,11 +2376,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.8.25":
-  version: 2.8.28
-  resolution: "baseline-browser-mapping@npm:2.8.28"
+  version: 2.8.29
+  resolution: "baseline-browser-mapping@npm:2.8.29"
   bin:
     baseline-browser-mapping: dist/cli.js
-  checksum: 10c0/d157d73de33bff69cf3413983dc1b2421063cd1c895e9edabc22dcb6667f7e17762b46ebeee5eee7496271351754c12750867c6ea5cb432f1bbe33dc5c62d1e6
+  checksum: 10c0/bb5f082d91b59c885504fd4ff999bd890c39e8b818afe00f15f0dfcdb7f7b80a655ad57429563091c0d3722649ba4a2f023ca3ede02e022b12ba6b0322a3314e
   languageName: node
   linkType: hard
 
@@ -3437,15 +3437,15 @@ __metadata:
   linkType: hard
 
 "form-data@npm:^4.0.0":
-  version: 4.0.4
-  resolution: "form-data@npm:4.0.4"
+  version: 4.0.5
+  resolution: "form-data@npm:4.0.5"
   dependencies:
     asynckit: "npm:^0.4.0"
     combined-stream: "npm:^1.0.8"
     es-set-tostringtag: "npm:^2.1.0"
     hasown: "npm:^2.0.2"
     mime-types: "npm:^2.1.12"
-  checksum: 10c0/373525a9a034b9d57073e55eab79e501a714ffac02e7a9b01be1c820780652b16e4101819785e1e18f8d98f0aee866cc654d660a435c378e16a72f2e7cac9695
+  checksum: 10c0/dd6b767ee0bbd6d84039db12a0fa5a2028160ffbfaba1800695713b46ae974a5f6e08b3356c3195137f8530dcd9dfcb5d5ae1eeff53d0db1e5aad863b619ce3b
   languageName: node
   linkType: hard
 
