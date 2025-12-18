@@ -1315,3 +1315,4 @@ See the [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES) file for information about th
 **Contact for licensing inquiries:**
 - 📧 license@degensoft.com 
 - 📧 legal@degensoft.com
+# SWAP-VM
